@@ -54,7 +54,6 @@ const App = () => {
         if (filtroFecha === 'todas' && filtroTipo === 'todos') {
             return tweets;
         } else if (filtroTipo && filtroFecha === 'todas') {
-            console.log('XDD');
             return tweets.filter((tweet) => tweet.type === filtroTipo);
         } else if (filtroFecha && filtroTipo === 'todos') {
             return tweets.filter(
@@ -70,7 +69,6 @@ const App = () => {
     };
 
     const tweets_mostrar = filtrar();
-    console.log(tweets_mostrar, 'xd');
 
     return (
         <div>

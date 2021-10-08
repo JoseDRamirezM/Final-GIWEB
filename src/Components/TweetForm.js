@@ -26,7 +26,8 @@ const TweetForm = ({ tweets, setTweets }) => {
             tweetsService
                 .publicar_tweet(nuevo_tweet)
                 .then((tweet_retornado) => {
-                    setTweets(tweets.concat(tweet_retornado));
+                    //setTweets(tweets.concat(tweet_retornado));
+                    window.location.reload(false);
                     setAutor('');
                     setTexto('');
                     setTipo('');
@@ -41,6 +42,11 @@ const TweetForm = ({ tweets, setTweets }) => {
                         setNotificacion(null);
                     }, 5000);
                 });
+        } else {
+            setNotificacion('Revisar los campos!');
+            setTimeout(() => {
+                setNotificacion(null);
+            }, 5000);
         }
     };
 
