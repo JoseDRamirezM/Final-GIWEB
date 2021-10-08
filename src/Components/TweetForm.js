@@ -58,26 +58,11 @@ const TweetForm = ({ tweets, setTweets }) => {
                             style={inputWidth}
                         >
                             <Form.Control
+                                placeholder="Pepito"
                                 width="50"
                                 type="text"
                                 value={autor}
                                 onChange={handleSetAutor}
-                            />
-                        </FloatingLabel>
-                    </Form.Group>
-                    <Form.Group>
-                        <FloatingLabel
-                            controlId="texto"
-                            label="Escribe algo"
-                            className="mb-3"
-                            style={inputWidth}
-                        >
-                            <Form.Control
-                                as="textarea"
-                                rows={3}
-                                type="text"
-                                value={texto}
-                                onChange={handleSetTexto}
                             />
                         </FloatingLabel>
                     </Form.Group>
@@ -89,6 +74,7 @@ const TweetForm = ({ tweets, setTweets }) => {
                             style={inputWidth}
                         >
                             <Form.Control
+                                placeholder="Clima"
                                 width="50"
                                 type="text"
                                 value={tipo}
@@ -96,6 +82,24 @@ const TweetForm = ({ tweets, setTweets }) => {
                             />
                         </FloatingLabel>
                     </Form.Group>
+                    <Form.Group>
+                        <FloatingLabel
+                            controlId="texto"
+                            label="Escribe algo"
+                            className="mb-3"
+                            style={inputWidth}
+                        >
+                            <Form.Control
+                                placeholder="Hace frio"
+                                as="textarea"
+                                style={{ height: '100px' }}
+                                type="text"
+                                value={texto}
+                                onChange={handleSetTexto}
+                            />
+                        </FloatingLabel>
+                    </Form.Group>
+
                     <Button variant="primary" id="create-button" type="submit">
                         Tweet!
                     </Button>

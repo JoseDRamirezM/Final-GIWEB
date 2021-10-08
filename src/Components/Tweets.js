@@ -17,6 +17,9 @@ const Tweets = ({ tweets }) => {
                                 {String(tweet.date).substring(0, 10)}
                             </Card.Subtitle>
                             <Card.Text>{tweet.content}</Card.Text>
+                            <Card.Footer className="text-muted">
+                                {tweet.type}
+                            </Card.Footer>
                         </Card.Body>
                     </Card>
                 </div>
