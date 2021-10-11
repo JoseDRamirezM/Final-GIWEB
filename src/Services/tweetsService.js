@@ -11,4 +11,5 @@ const publicar_tweet = async (nuevo_tweet) => {
     return response.data;
 };
 
+// eslint-disable-next-line import/no-anonymous-default-export
 export default { get_tweets, publicar_tweet };
