@@ -4,13 +4,11 @@ import Navbar from 'react-bootstrap/Navbar';
 
 const BarraNav = () => {
     return (
-        <div>
-            <Navbar variant="dark" bg="dark">
-                <Container>
-                    <Navbar.Brand>Mini Twitter</Navbar.Brand>
-                </Container>
-            </Navbar>
-        </div>
+        <Navbar expand="lg" variant="dark" bg="primary" style={{ margin: 1 + "em" }}>
+          <Container>
+            <Navbar.Brand href="">Mini Twitter</Navbar.Brand>
+          </Container>
+        </Navbar>
     );
 };
 
